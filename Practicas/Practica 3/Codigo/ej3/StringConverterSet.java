@@ -93,9 +93,10 @@ public class StringConverterSet extends AbstractSet{
 
 		@Override
 		public String next() {
-			String str = set.get(i).toString();
-			i++;
-			return str;
+            if (!hasNext()) {
+                throw new java.util.NoSuchElementException();
+            }
+			return set.get(i++).toString();
 		}
 		
 	}
