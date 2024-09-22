@@ -34,17 +34,19 @@ public class Stack implements Iterable {
 //	public class StackIterator implements Iterator {
 	private class StackIterator implements Iterator {
 
-		private int i = -1;
+		private int i = 0;
 		
 		@Override
 		public boolean hasNext() {
-			return !(items.size() == i+1);
+			return i < items.size();
 		}
 
 		@Override
 		public Object next() {
-			i++;
-			return items.get(i);
+			if (!hasNext()) {
+				throw new java.util.NoSuchElementException();
+			}
+			return items.get(i++);
 		}
 		
 	}

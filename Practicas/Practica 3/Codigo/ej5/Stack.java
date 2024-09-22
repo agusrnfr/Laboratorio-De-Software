@@ -40,13 +40,15 @@ public class Stack implements Iterable {
 
 			@Override
 			public boolean hasNext() {
-				return !(items.size() == i + 1);
+				return i < items.size();
 			}
 
 			@Override
 			public Object next() {
-				i++;
-				return items.get(i);
+				if (!hasNext()) {
+					throw new java.util.NoSuchElementException();
+				}
+				return items.get(i++);
 			}
 		};
 	}
