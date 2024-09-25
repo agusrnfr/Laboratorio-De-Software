@@ -1,10 +1,10 @@
 package repaso.parcial.primero;
 
-public class RangoDouble {
+public class Rango {
 	private double limiteInferior;
 	private double limiteSuperior;
 	
-	RangoDouble(double limiteInferior, double limiteSuperior) {
+	Rango(double limiteInferior, double limiteSuperior) {
 		this.limiteInferior = limiteInferior;
 		this.limiteSuperior = limiteSuperior;
 	}
@@ -21,6 +21,10 @@ public class RangoDouble {
 
 	public boolean estaEnRango(double value) {
 		return value >= this.limiteInferior && value <= this.limiteSuperior;
+	}
+	
+	public boolean estaEnRango(int value) {
+		return value >= (int) this.limiteInferior && value <= (int) this.limiteSuperior;
 	}
 
 	@Override

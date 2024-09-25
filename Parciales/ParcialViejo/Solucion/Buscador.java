@@ -23,7 +23,7 @@ public class Buscador {
 	}
 
 	// SELECCIONAR CON COMPARADOR PERSONALIZADO
-	public List<Pelicula> seleccionar(Genero g, ClasificacionEdad ce, RangoDouble valoracion, RangoInteger reproduccion,
+	public List<Pelicula> seleccionar(Genero g, ClasificacionEdad ce, Rango valoracion, Rango reproduccion,
 			Comparator<Pelicula> comp) {
 		return this.peliculas.stream()
 				.filter(pelicula -> pelicula.getGenero().contains(g) && pelicula.getClasificacionEdad().equals(ce))
@@ -33,8 +33,8 @@ public class Buscador {
 	}
 
 	// SELECCIONAR CON COMPARADOR POR DEFECTO
-	public List<Pelicula> seleccionar(Genero g, ClasificacionEdad ce, RangoDouble valoracion,
-			RangoInteger reproduccion) {
+	public List<Pelicula> seleccionar(Genero g, ClasificacionEdad ce, Rango valoracion,
+			Rango reproduccion) {
 		return this.peliculas.stream()
 				.filter(pelicula -> pelicula.getGenero().contains(g) && pelicula.getClasificacionEdad().equals(ce))
 				.filter(pelicula -> valoracion.estaEnRango(pelicula.getPuntuacion()))

@@ -44,13 +44,13 @@ public class BuscadorTest {
 		buscador.agregarPelicula(new Pelicula("Psicosis", "EEUU", List.of(Genero.SUSPENSO, Genero.FICCION),
 				clasificacionMAS18, 8.5, 600, 1960));
 
-		RangoDouble rangoValoracion = new RangoDouble(7.0, 10.0);
-		RangoInteger rangoReproducciones = new RangoInteger(0, 600);
+		Rango rangoValoracion = new Rango(7.5, 10.0);
+		Rango rangoReproducciones = new Rango(0, 300);
 
 		System.out.println("Ordenando por valoracion...\n");
 
-		 List<Pelicula> peliculasFiltradas = buscador.seleccionar(Genero.MUSICAL,
-		 clasificacionMAS13, rangoValoracion, rangoReproducciones,
+		 List<Pelicula> peliculasFiltradas = buscador.seleccionar(Genero.FICCION,
+		 clasificacionMAS18, rangoValoracion, rangoReproducciones,
 		 Buscador.COMPARADOR_VALORACION);
 
 //		List<Pelicula> peliculasFiltradas = buscador.seleccionar(Buscador.COMPARADOR_VALORACION);

@@ -19,7 +19,7 @@ public class Pelicula {
 		this.clasificacionEdad = clasificacionEdad;
 		this.anio = anio;
 		
-		if ( (puntuacion < 0.0) | (puntuacion > 10.0) ){
+		if ( (puntuacion < 0.0) || (puntuacion > 10.0) ){
 			throw new InvalidParameterException();
 		}
 		
