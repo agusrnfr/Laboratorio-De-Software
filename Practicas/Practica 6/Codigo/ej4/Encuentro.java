@@ -17,7 +17,7 @@ public class Encuentro extends Partido implements Tormenta {
 	public void diluvio() throws Lluvia {
 	}
 
-	void jugada() throws EquipoIncompleto, Falta {
+	void jugada() throws Mano{
 	}
 
 	public static void main(String[] args) {
