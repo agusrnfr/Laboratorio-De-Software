@@ -7,3 +7,4 @@ Ejercicios de "Laboratorio De Software"
 * [**Práctica 4**](https://github.com/agusrnfr/Laboratorio-De-Software/tree/main/Practicas/Practica%204)
 * [**Práctica 5**](https://github.com/agusrnfr/Laboratorio-De-Software/tree/main/Practicas/Practica%205)
 * [**Práctica 6**](https://github.com/agusrnfr/Laboratorio-De-Software/tree/main/Practicas/Practica%206)
+* [**Práctica 7**](https://github.com/agusrnfr/Laboratorio-De-Software/tree/main/Practicas/Practica%207)
